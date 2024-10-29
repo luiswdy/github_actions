@@ -17,4 +17,10 @@ jobs:
       # This step references the directory that contains the action
       - name: Use local action
         uses: ./.github/actions/hello-world-action
+      # This step adds an action from a different repository. Syntax: {owner}/{repo}@{ref}
+      - name: Setup Node from another repo
+        uses: actions/setup-node@v4
+          # This step references a container on Docker Hub. Syntax: docker://{image}:{tag}
+      - name: Alpine linux from Docker Hub
+        uses: docker://alpine:3.8
 
