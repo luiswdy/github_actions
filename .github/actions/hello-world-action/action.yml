@@ -1,0 +1,16 @@
+name: hello-world-action
+author: Luis Wu
+description: A minimalistic action
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+runs:
+  using: "composite"
+  steps:
+    - name: echo "Hello message"
+      shell: bash
+      run: echo "Hello! ${{ github.actor }}."
