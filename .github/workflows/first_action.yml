@@ -1,0 +1,20 @@
+on:
+  push: 
+    branches: [ main, develop ]
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    # NOTE THAT
+    # you can reference an action with either {owner}{repo}@{ref} 
+    # or ./path/to/dir syntax in your workflow file.
+
+    steps:
+      # This step check out a copy of your repository
+      - name: First step - check out repository
+        uses: actions/checkout@v4
+      # This step references the directory that contains the action
+      - name: Use local action
+        uses: ./.github/actions/hello-world-action
+

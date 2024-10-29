@@ -1,0 +1,20 @@
+name: hello-world-action
+author: Luis Wu
+description: A minimalistic action
+
+# For the structure and metadata of a GitHub action,
+# please refer
+# [Metadata syntax for GitHub Actions](https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions)
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+runs:
+  using: "composite"
+  steps:
+    - name: echo "Hello message"
+      shell: bash
+      run: echo "Hello! ${{ github.actor }}."
