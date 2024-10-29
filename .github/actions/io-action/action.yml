@@ -1,0 +1,18 @@
+# This file demonstrates how a GitHub action defines its input and output
+name: "Sample action taking inputs and outputs"
+description: "Receives a file and generate an output."
+
+# Defining inputs here
+inputs:
+  file-path: # This is a definition of an input named 'file-path'
+    description: "Path to test script"
+    required: true
+    default: "test-file.js"
+
+outputs:
+  result-path: # This is a definition of an output name ''result-path'
+    description: "Path to results file"
+
+runs:
+  using: "node16" # Javascript is the only language that GitHub Actions supports. So it doesn't need a container to run the action.
+  main: "index.js" # the action javascript that runs the logic of the action.

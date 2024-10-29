@@ -15,8 +15,17 @@ jobs:
       - name: First step - check out repository
         uses: actions/checkout@v4
       # This step references the directory that contains the action
-      - name: Use local action
+      - name: Use local action hellow-word-action
         uses: ./.github/actions/hello-world-action
+      # This step references the directory that contains the action
+      - name: Use local action io-action
+        uses: ./.github/actions/io-action
+        id: example-action
+        with:
+          file-path: "${{ github.workspace }}/.github/text/input.txt"
+      # Show io result
+      - name: Show result
+        run: cat ${{ steps.example-action.outputs.results-file }}
       # This step adds an action from a different repository. Syntax: {owner}/{repo}@{ref}
       - name: Setup Node from another repo
         uses: actions/setup-node@v4
