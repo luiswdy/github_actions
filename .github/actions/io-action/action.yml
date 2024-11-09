@@ -14,5 +14,5 @@ outputs:
     description: "Path to results file"
 
 runs:
-  using: "node16" # Javascript is the only language that GitHub Actions supports. So it doesn't need a container to run the action.
+  using: "node20" # Javascript is the only language that GitHub Actions supports. So it doesn't need a container to run the action.
   main: "index.js" # the action javascript that runs the logic of the action.
