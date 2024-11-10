@@ -32,12 +32,6 @@ jobs:
       # This step references a container on Docker Hub. Syntax: docker://{image}:{tag}
       - name: Alpine linux from Docker Hub
         uses: docker://alpine:3.8
-      # This step references an action using a tag
-      - name: Javascript action v1.0.1
-        uses: actions/javascript-action@abc55e37284577eb2e0040a220d238ad1536b586
-      # This step references an action using a SHA digest
-      - name: Javascript action by SHA
-        uses: actions/javascript-action@a824008085750b8e136effc585c3cd6082bd575f
       # This step references an action using a branch
       - name: Javascript action by main branch
         uses: actions/javascript-action@main
