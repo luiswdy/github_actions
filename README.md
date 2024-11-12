@@ -15,6 +15,7 @@ This is a project serving as a playground to try out GitHub Actions. Most of the
     - Manual
 
 # Useful links
+- [Guides for GitHub Actions](https://docs.github.com/en/actions/guides)
 - [GitHub Marketplace - actions](https://github.com/marketplace?type=actions)
 - [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 - [Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
