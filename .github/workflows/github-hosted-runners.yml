@@ -1,0 +1,19 @@
+on:
+  push
+
+jobs:
+  linux-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "check ubuntu version"
+        run: lsb_release -a
+  macos-runner:
+    runs-on: macos-latest
+    steps:
+      - name: "check macos version"
+        run: sw_vers
+  windows-runner:
+    runs-on: windows-latest
+    steps:
+    - name: "check windows version"
+      run: WINVER
