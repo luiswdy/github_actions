@@ -1,0 +1,14 @@
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  show-message-set:
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        people: [Alice, Barbie, Cindy, Daisy, Elsa]
+    steps:
+      - name: Say hello to people
+        run: |
+          echo "hello ${{ matrix.people }}"
