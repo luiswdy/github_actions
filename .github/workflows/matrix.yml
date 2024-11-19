@@ -7,8 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy: 
       matrix:
-        people: [Alice, Barbie, Cindy, Daisy, Elsa]
+        people: [Alice, Barbie, Cindy, Daisy, Elsa] # 1 dimensional matrix
     steps:
       - name: Say hello to people
         run: |
           echo "hello ${{ matrix.people }}"
+  show-message-by-matrix:
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        hello: [Hello!, Hola!, Olá!, Bonjour!]
+        people: [Alice, Barbie, Cindy, Daisy, Elsa] # 2 dimensional matrix 
+    steps:
+      - name: Say hello to people
+        run: |
+          echo "hello ${{ matrix.people }}"
+
